@@ -14,7 +14,6 @@ const onSignUpFailure = responseData => {
 }
 
 const onSignInSuccess = responseData => {
-  console.log('Success', responseData)
   $('#message').text('You Signed In successfully!')
   $('#sign-in')[0].reset()
   store.user = responseData.user
