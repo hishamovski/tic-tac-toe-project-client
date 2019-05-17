@@ -31,23 +31,47 @@
     <input type="password" name="credentials[password]" placeholder="password"/>
     <input type="submit" value="Sign In"/>
   </form>
-  <hr>
 
-      <h2>Tic Tac Toe Game</h2>
+    <hr>
+    <h2>Change Password</h2>
+    <form id="change-password">
+      <input type="password" name="passwords[old]" placeholder="old password"/>
+      <input type="password" name="passwords[new]" placeholder="new password"/>
+      <input type="submit" value="Change password"/>
+    </form>
+    <hr>
+    <h2>Sign out</h2>
+    <form id="sign-out">
+      <input type="submit" value="Sign Out"/>
+    </form>
+
+      <h3>Tic Tac Toe Game</h3>
+      <p class="result">  </p>
+      <p>How would you like to be</p>
+
+      <form id="reset">
+        <input type="button" value="Reset Game"/>
+      </form>
+
+      <div class="section-wrap">
+        <input type="radio" name="player" value="X" class="radio-label" checked="true"> X
+        <input type="radio" name="player" value="O" class="radio-label"> O
+      </div>
+
 
       <div class="container">
         <div class="row justify-content-center">
-            <button type="button" class="col-4 col-sm-4 btn-lg">1</button>
-            <button type="button" class="col-4 col-sm-4 btn-lg">2</button>
-            <button type="button" class="col-4 col-sm-4 btn-lg">3</button>
+            <button type="button" id="0" class="col-4 col-sm-4 btn-lg"></button>
+            <button type="button" id="1" class="col-4 col-sm-4 btn-lg"></button>
+            <button type="button" id="2" class="col-4 col-sm-4 btn-lg"></button>
 
-            <button type="button" class="col-4 col-sm-4 btn-lg">4</button>
-            <button type="button" class="col-4 col-sm-4 btn-lg">5</button>
-            <button type="button" class="col-4 col-sm-4 btn-lg">6</button>
+            <button type="button" id="3" class="col-4 col-sm-4 btn-lg"></button>
+            <button type="button" id="4" class="col-4 col-sm-4 btn-lg"></button>
+            <button type="button" id="5" class="col-4 col-sm-4 btn-lg"></button>
 
-            <button type="button" class="col-4 col-sm-4 btn-lg">7</button>
-            <button type="button" class="col-4 col-sm-4 btn-lg">8</button>
-            <button type="button" class="col-4 col-sm-4 btn-lg">9</button>
+            <button type="button" id="6" class="col-4 col-sm-4 btn-lg"></button>
+            <button type="button" id="7" class="col-4 col-sm-4 btn-lg"></button>
+            <button type="button" id="8" class="col-4 col-sm-4 btn-lg"></button>
 
         </div>
     </div>

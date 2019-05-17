@@ -4,14 +4,46 @@ $alt-color: $cyan;
 $body-bg-color: $gray-200;
 $font-color: $light;
 
+.result {
+  background-color: red;
+  font-size: 15px;
+}
 
+form {
+  text-align: center;
+  margin-bottom: 15px;
+}
 
 body {
   background-color: $body-bg-color;
 }
 
-
+p {
+  margin-bottom: 20px;
+  text-align: center;
+}
 
 nav {
   height: 35px;
+}
+
+h3{
+  margin: 30px 0 15px 0;
+  text-align: center;
+  color: red;
+}
+
+.container {
+  margin-bottom: 90px;
+}
+.btn-lg {
+  padding: 30px;
+}
+
+.section-wrap{
+    text-align:center;
+}
+.radio-label{
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
