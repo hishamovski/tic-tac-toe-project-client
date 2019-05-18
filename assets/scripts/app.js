@@ -20,7 +20,6 @@ $(() => {
   $(document).ready(function () {
     disableButtons()
   })
-
   $('#reset').on('click', function (event) {
     createGame()
     $('.btn-lg').text('')
@@ -122,4 +121,11 @@ const disableButtons = function () {
 }
 const enableButtons = function () {
   $('.btn-lg').prop('disabled', false)
+}
+function openForm () {
+  document.getElementById('myForm').style.display = 'block'
+}
+
+function closeForm() {
+  document.getElementById('myForm').style.display = 'none'
 }

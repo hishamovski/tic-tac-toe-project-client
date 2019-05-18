@@ -12,21 +12,33 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <nav class="navbar navbar-dark bg-dark">
-        <a href = "">Sign-Up</a>
-        <a href = "">Sign-In</a>
-      </nav>
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" id="Nav-sign-in">Sign-In</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" onclick="openForm()">Sign-Up</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled"  onclick="openForm()" aria-disabled="false">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled"  onclick="openForm()" aria-disabled="false">Change password</a>
+        </li>
+      </ul>
+
       <p id="message"> </p>
       <p id="message2"> </p>
       <h2>Sign Up</h2>
-    <form id='sign-up'>
+      <form id='sign-up'>
       <input type="email" name="credentials[email]" placeholder="Email"/>
       <input type="password" name="credentials[password]" placeholder="password"/>
       <input type="password" name="credentials[password_confirmation]" placeholder="password confirmation"/>
       <input type="submit" value="Sign Up"/>
     </form>
     <hr>
-    <h2>Sign In</h2>
+
+<h2>Sign In</h2>
   <form id='sign-in'>
     <input type="email" name="credentials[email]" placeholder="Email"/>
     <input type="password" name="credentials[password]" placeholder="password"/>
