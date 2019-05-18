@@ -25,7 +25,18 @@ const update = formData => {
   })
 }
 
+const index = () => {
+  return $.ajax({
+    url: config.apiUrl + '/games',
+    method: 'GET', // default value is GET
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   create,
-  update
+  update,
+  index
 }

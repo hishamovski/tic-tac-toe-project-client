@@ -17,7 +17,14 @@ const onUpdateGame = formData => {
     .catch(ui.onUpdateFailure)
 }
 
+const onIndex = event => {
+  api.index()
+    .then(ui.onIndexSuccess)
+    .catch(ui.onIndexFailure)
+}
+
 module.exports = {
   onCreate,
-  onUpdateGame
+  onUpdateGame,
+  onIndex
 }

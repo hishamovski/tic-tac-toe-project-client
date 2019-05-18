@@ -10,8 +10,6 @@ const onCreateSuccess = responseData => {
 const onCreateFailure = responseData => {
   console.log('Failure', responseData)
   $('#message').text('failed to create')
-  $('#message').removeClass()
-  $('#message').addClass('failure')
 }
 
 const onUpdateSuccess = responseData => {
@@ -22,9 +20,21 @@ const onUpdateFailure = responseData => {
   console.log('Failure')
 }
 
+const onIndexSuccess = responseData => {
+  console.log('Success', responseData)
+  $('#message2').text('Total games played: ' + responseData.games.length)
+}
+
+const onIndexFailure = responseData => {
+  console.log('OnIndex Failure', responseData)
+  $('#message2').text('failed to get all games')
+}
+
 module.exports = {
   onCreateSuccess,
   onCreateFailure,
   onUpdateSuccess,
-  onUpdateFailure
+  onUpdateFailure,
+  onIndexSuccess,
+  onIndexFailure
 }

@@ -1,5 +1,7 @@
 'use strict'
 
+const gameEvents = require('../games/events.js')
+
 const store = require('../store')
 const onSignUpSuccess = responseData => {
   console.log('Success', responseData)
@@ -18,7 +20,7 @@ const onSignInSuccess = responseData => {
   $('#sign-in')[0].reset()
   store.user = responseData.user
   console.log('store is', store.user)
-
+  gameEvents.onIndex()
 }
 
 const onSignInFailure = responseData => {
