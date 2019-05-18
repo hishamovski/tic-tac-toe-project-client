@@ -10,6 +10,7 @@ const authEvents = require('./auth/events')
 const game = ['', '', '', '', '', '', '', '', '']
 let player = 'X'
 let counter = 0
+let over = false
 
 $(() => {
   $('#sign-up').on('submit', authEvents.onSignUp)
@@ -29,6 +30,7 @@ $(() => {
       game[i] = ''
     }
     $('.result').text('')
+    over = false
   })
 
   $('.btn-lg').on('click', function (event) {
@@ -46,9 +48,10 @@ $(() => {
       if (checkWinner(game, player) === 'X') {
         $('.result').text('Congratulation, X won')
         disableButtons()
+        over = true
       }
       player = 'O'
-      updateGame(index, game[index], false)
+      updateGame(index, game[index], over)
     } else {
       $(event.target).text('O')
       $(event.target).prop('disabled', true)
@@ -58,8 +61,9 @@ $(() => {
       if (checkWinner(game, player) === 'O') {
         $('.result').text('Congratulation, O won')
         disableButtons()
+        over = true
       }
-      updateGame(index, game[index], false)
+      updateGame(index, game[index], over)
       player = 'X'
     }
   })

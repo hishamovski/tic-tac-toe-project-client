@@ -18,6 +18,7 @@ const onSignInSuccess = responseData => {
   $('#sign-in')[0].reset()
   store.user = responseData.user
   console.log('store is', store.user)
+
 }
 
 const onSignInFailure = responseData => {
