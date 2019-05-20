@@ -78,6 +78,7 @@ const onSignOutSuccess = () => {
   $('#signin').show()
   $('#signup').show()
   $('.btn-lg').text('')
+  $('#result').text('')
 }
 
 const onSignOutFailure = () => {
