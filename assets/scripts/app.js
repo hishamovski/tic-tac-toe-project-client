@@ -7,6 +7,7 @@
 // require('./example')
 const gamesEvents = require('./games/events')
 const authEvents = require('./auth/events')
+const store = require('./store')
 const game = ['', '', '', '', '', '', '', '', '']
 let player = 'X'
 let counter = 0
@@ -22,16 +23,26 @@ $(() => {
     $('#profile').hide()
   })
   $('#reset').on('click', function (event) {
-    createGame()
-    $('.btn-lg').text('')
-    enableButtons()
-    counter = 0
-    for (let i = 0; i < game.length; i++) {
-      game[i] = ''
+    if (store.token === undefined) {
+      $('#feedback').show()
+      $('#feedback').text('Log-In to play')
+      $('#feedback').removeClass()
+      $('#feedback').addClass('failure')
+      setTimeout(function () {
+        $('#feedback').hide()
+      }, 4000)
+    } else {
+      createGame()
+      $('.btn-lg').text('')
+      enableButtons()
+      counter = 0
+      for (let i = 0; i < game.length; i++) {
+        game[i] = ''
+      }
+      $('#result').text('')
+      over = false
+      gamesEvents.onIndex()
     }
-    $('#result').text('')
-    over = false
-    gamesEvents.onIndex()
   })
 
   $('.btn-lg').on('click', function (event) {
