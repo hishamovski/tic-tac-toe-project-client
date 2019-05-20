@@ -41,6 +41,7 @@ $(() => {
 
     if (player === 'X') {
       $(event.target).text('X')
+      $(event.target).val('public/images/X.jpg')
       $(event.target).prop('disabled', true)
       const index = Number($(event.target).attr('id'))
       game[index] = 'X'
