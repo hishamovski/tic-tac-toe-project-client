@@ -22,8 +22,8 @@ $(() => {
     disableButtons()
     $('#profile').hide()
   })
-  $('#reset').on('click', function (event) {
-    if (store.token === undefined) {
+  $('#reset').on('click', function () {
+    if (store.user === undefined) {
       $('#feedback').show()
       $('#feedback').text('Log-In to play')
       $('#feedback').removeClass()

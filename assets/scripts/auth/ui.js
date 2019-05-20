@@ -1,7 +1,6 @@
 'use strict'
 
 const gameEvents = require('../games/events.js')
-const app = require('../../scripts/app.js')
 
 const store = require('../store')
 const onSignUpSuccess = responseData => {
