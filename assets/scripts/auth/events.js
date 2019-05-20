@@ -9,7 +9,6 @@ const onSignUp = event => {
 
   const form = event.target
   const formData = getFormFields(form)
-  console.log('sign up pressed', formData)
   api.signUp(formData)
     .then(ui.onSignUpSuccess)
     .catch(ui.onSignUpFailure)
@@ -20,7 +19,6 @@ const onSignIn = event => {
 
   const form = event.target
   const formData = getFormFields(form)
-  console.log('sign In pressed', formData)
 
   api.signIn(formData)
     .then(ui.onSignInSuccess)
@@ -31,7 +29,6 @@ const onChangePassword = event => {
 
   const form = event.target
   const formData = getFormFields(form)
-  console.log('change password pressed', formData)
 
   api.changePassword(formData)
     .then(ui.onChangePasswordSuccess)

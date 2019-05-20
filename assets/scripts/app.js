@@ -44,12 +44,22 @@ $(() => {
       $(event.target).prop('disabled', true)
       const index = Number($(event.target).attr('id'))
       game[index] = 'X'
-      console.log(checkWinner(game, player))
+
       if (checkWinner(game, player) === 'X') {
         $('.result').text('Congratulation, X won')
         disableButtons()
         over = true
       }
+      let count = 0
+      for (let i = 0; i < game.length; i++) {
+        if (game[i] === 'X' || game[i] === 'O') {
+          count += 1
+        }
+      }
+      if (count === 9 && checkWinner(game, player) !== 'X') {
+        $('.result').text('Game is draw')
+      }
+      gamesEvents.onIndex()
       player = 'O'
       updateGame(index, game[index], over)
     } else {
@@ -57,12 +67,21 @@ $(() => {
       $(event.target).prop('disabled', true)
       const index = Number($(event.target).attr('id'))
       game[index] = 'O'
-      console.log(checkWinner(game, player))
       if (checkWinner(game, player) === 'O') {
         $('.result').text('Congratulation, O won')
         disableButtons()
         over = true
       }
+      let count = 0
+      for (let i = 0; i < game.length; i++) {
+        if (game[i] === 'X' || game[i] === 'O') {
+          count += 1
+        }
+      }
+      if (count === 9 && checkWinner(game, player) !== 'O') {
+        $('.result').text('Game is draw')
+      }
+      gamesEvents.onIndex()
       updateGame(index, game[index], over)
       player = 'X'
     }

@@ -5,11 +5,24 @@ const gameEvents = require('../games/events.js')
 const store = require('../store')
 const onSignUpSuccess = responseData => {
   $('#sign-up')[0].reset()
+  $('#feedback').show()
+  $('#feedback').text('You Sign-up Successfully')
+  $('#feedback').removeClass()
+  $('#feedback').addClass('success')
+  setTimeout(function () {
+    $('#feedback').hide()
+  }, 3000)
 }
 
 const onSignUpFailure = responseData => {
-  console.log('Failure', responseData)
   $('#sign-up')[0].reset()
+  $('#feedback').show()
+  $('#feedback').text('Sign-up Failure')
+  $('#feedback').removeClass()
+  $('#feedback').addClass('failure')
+  setTimeout(function () {
+    $('#feedback').hide()
+  }, 3000)
 }
 
 const onSignInSuccess = responseData => {
@@ -19,19 +32,44 @@ const onSignInSuccess = responseData => {
   $('#signin').hide()
   $('#signup').hide()
   $('#profile').show()
+  $('#feedback').show()
+  $('#feedback').text('You Sign-In Successfully')
+  $('#feedback').removeClass()
+  $('#feedback').addClass('success')
+  setTimeout(function () {
+    $('#feedback').hide()
+  }, 4000)
 }
 
 const onSignInFailure = responseData => {
-  console.log('Failure', responseData)
+  $('#feedback').show()
+  $('#feedback').text('Sign-In Failure')
+  $('#feedback').removeClass()
+  $('#feedback').addClass('failure')
+  setTimeout(function () {
+    $('#feedback').hide()
+  }, 3000)
 }
 
 const onChangePasswordSuccess = responseData => {
-  console.log('Success', responseData)
   $('#change-password')[0].reset()
+  $('#feedback').show()
+  $('#feedback').text('Password change Successfully')
+  $('#feedback').removeClass()
+  $('#feedback').addClass('success')
+  setTimeout(function () {
+    $('#feedback').hide()
+  }, 5000)
 }
 
 const onChangePasswordFailure = responseData => {
-  console.log('Failure', responseData)
+  $('#feedback').show()
+  $('#feedback').text('Password Change Failure')
+  $('#feedback').removeClass()
+  $('#feedback').addClass('failure')
+  setTimeout(function () {
+    $('#feedback').hide()
+  }, 5000)
 }
 
 const onSignOutSuccess = () => {

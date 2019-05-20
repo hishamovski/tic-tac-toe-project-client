@@ -11,15 +11,37 @@ ul > li > form .sign-out {
   display: flex;
   border-radius: 3px;
   background-color: red;
-
 }
 
+p {
+  color: #000;
+  font-family: 'Artifika', serif;
+  text-align: center;
+  font-size: 20px;
+  margin: 20px 0 0;
+}
+
+.success {
+  color: #33cabb;
+}
+
+.failure {
+  color: #F00;
+}
+
+input {
+  border: 0;
+  padding: 8px;
+  font-size: 12px;
+  border-radius: 8px;
+  background: #33cabb;
+  color: white;
+}
 
 .messagep {
-  padding: 10px 10px;
+  padding: 10px;
   margin-bottom: 30px;
 }
-
 
 .form-control {
   box-shadow: none;
@@ -181,8 +203,6 @@ ul > li > form .sign-out {
   font-size: 14px;
 }
 
-
-
 .navbar .form-wrapper .hint-text {
   text-align: center;
   margin-bottom: 15px;
@@ -288,6 +308,7 @@ p {
   margin-left: 20px;
   margin-bottom: 20px;
 }
+
 .section-wrap {
   text-align: center;
 }
