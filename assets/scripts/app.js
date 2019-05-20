@@ -19,6 +19,7 @@ $(() => {
   $('#sign-out').on('submit', authEvents.onSignOut)
   $(document).ready(function () {
     disableButtons()
+    $('#profile').hide()
   })
   $('#reset').on('click', function (event) {
     createGame()
@@ -121,11 +122,4 @@ const disableButtons = function () {
 }
 const enableButtons = function () {
   $('.btn-lg').prop('disabled', false)
-}
-function openForm () {
-  document.getElementById('myForm').style.display = 'block'
-}
-
-function closeForm() {
-  document.getElementById('myForm').style.display = 'none'
 }
