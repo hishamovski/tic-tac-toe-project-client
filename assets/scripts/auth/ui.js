@@ -12,7 +12,6 @@ const onSignUpSuccess = responseData => {
   setTimeout(function () {
     $('#feedback').hide()
   }, 3000)
-  $('#signup').hide()
 }
 
 const onSignUpFailure = responseData => {
