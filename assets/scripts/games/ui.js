@@ -7,7 +7,13 @@ const onCreateSuccess = responseData => {
 }
 
 const onCreateFailure = responseData => {
-  $('#message').text('failed to create')
+  $('#feedback').show()
+  $('#feedback').text('Log-In to play')
+  $('#feedback').removeClass()
+  $('#feedback').addClass('failure')
+  setTimeout(function () {
+    $('#feedback').hide()
+  }, 4000)
 }
 
 const onUpdateSuccess = responseData => {
