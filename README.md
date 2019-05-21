@@ -12,14 +12,11 @@ Technologies used : JSON,
                     api.
 
 
+Development process
+  First, I tried to understand the game logic and how my webpage wil interact with the api. i realized that we have to PATCH after every move and NOT at the end of the game. Then I Whiteboard my problems before start to code and that helps me a lot to know what I have to do after each step.
+  I followed the schedule proposed in the requirement document. So I did signup and signin forms at the page  and start working until I get the auth and the game logic working then I start working on design.
 
-
-- Get an understanding of the game board and how I will set up the Game
-- Define the project goal
-- Define the project requirement
-- Create a project schedule (following the schedule proposed)
-- start working on the project
-- solving problems by posting an issue 
+  At the end I just clear my project from any bugs and tried to meet all the requirements. 
 
 
 
