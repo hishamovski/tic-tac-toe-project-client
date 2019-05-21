@@ -14,6 +14,15 @@ Technologies used : JSON,
 
 
 
+- Get an understanding of the game board and how I will set up the Game
+- Define the project goal
+- Define the project requirement
+- Create a project schedule (following the schedule proposed)
+- start working on the project
+- solving problems by posting an issue 
+
+
+
 Unsolved problem: figure out the multi player game. I ll try to fix it in the future
 
 WireFrame:  https://imgur.com/a/WVTcY2g
